@@ -23,3 +23,8 @@
   // html <button /> onmousedown的默认策略鼠标按下后处于 focus 状态，也就是看上去没有恢复成原来的颜色（此时是focus样式被激活）。
   @mousedown="e => e.preventDefault()"
   ```
+
+- css终于支持垂直居中命令了
+  ```css
+  align-content: center;
+  ```
