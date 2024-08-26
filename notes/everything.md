@@ -28,3 +28,13 @@
   ```css
   align-content: center;
   ```
+
+- 100M宽带传输速度为什么达不到100MB/s
+  - 100M宽带的传输速度达不到100MB/s是因为“100M”宽带的“M”代表的是Megabits（兆比特，Mb），而不是Megabytes（兆字节，MB）
+    - 100M宽带通常指的是100 Mbps（兆比特每秒）。这个“b”是指bits（比特）
+    - MB/s是兆字节每秒。这个“B”是指Bytes（字节）
+    - 由于1字节（Byte）等于8比特（bits），因此在将 Mbps 转换为 MB/s 时，需要除以8
+    - 所以，100 Mbps 的宽带在理想情况下的最大传输速度是 12.5 MB/s，而不是 100 MB/s
+  - 单位
+    - MB/s (Megabytes per second): 1 MB (Megabyte) = (10^6) bytes = 1,000,000 bytes
+    - Mib/s (Mebibits per second): 1 Mib (Mebibit) = (2^{20}) bits = 1,048,576 bits
