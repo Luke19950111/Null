@@ -38,3 +38,6 @@
   - 单位
     - MB/s (Megabytes per second): 1 MB (Megabyte) = (10^6) bytes = 1,000,000 bytes
     - Mib/s (Mebibits per second): 1 Mib (Mebibit) = (2^{20}) bits = 1,048,576 bits
+  
+- 虚与委蛇
+  - `xū yǔ wēi yí`
