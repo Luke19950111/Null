@@ -51,3 +51,8 @@
     - 对象键名必须使用双引号
     - 数组或对象最后一个成员后面，不能加逗号
   - null、空数组、空对象都是合法的 JSON
+
+- respective
+  - respective adj.分别的，各自的
+  - respect n.尊敬
+  - expective adj.期待的
