@@ -56,3 +56,6 @@
   - respective adj.分别的，各自的
   - respect n.尊敬
   - expective adj.期待的
+
+- 埋怨
+  - mán yuàn
