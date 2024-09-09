@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalDate: '@use "~/assets/css/colors.scss" as *;'
+          additionalData: '@use "~/assets/css/colors.scss" as *;'
         }
       }
     }
