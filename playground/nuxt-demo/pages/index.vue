@@ -1,5 +1,6 @@
 <template>
   index
+  <Hi />
 </template>
 
 <script setup>
