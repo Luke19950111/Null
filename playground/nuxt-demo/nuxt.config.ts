@@ -7,5 +7,14 @@ export default defineNuxtConfig({
     public: {
       apiBase: '/api'
     }
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalDate: '@use "~/assets/css/colors.scss" as *;'
+        }
+      }
+    }
   }
 })
