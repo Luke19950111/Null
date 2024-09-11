@@ -59,3 +59,11 @@
 
 - 埋怨
   - mán yuàn
+
+- git配置http代理
+  ```
+  git config --global http.proxy 127.0.0.1:7899
+  git config --global https.proxy 127.0.0.1:7899
+
+  注意按自己的端口port修改 
+  ```
