@@ -57,6 +57,10 @@
   - respect n.尊敬
   - expective adj.期待的
 
+- present
+  - represent v.代表，表示；象征，体现；展示；等于，相当于
+  - present v.提出，介绍
+
 - 埋怨
   - mán yuàn
 
