@@ -159,3 +159,72 @@ Tailwind CSS 的主要特点：
    - 只生成实际使用到的 CSS
 
 这样配置后，你就可以在项目中使用 Tailwind CSS 的所有功能了。
+
+
+
+# 报错修改
+
+看起来是 Tailwind CSS 的 PostCSS 插件配置有问题。让我们修复这个问题：
+
+1. 首先需要安装正确的依赖：
+
+```bash
+pnpm add -D @tailwindcss/postcss
+```
+
+2. 然后修改 `postcss.config.js` 文件：
+
+
+```javascript:postcss.config.js
+export default {
+  plugins: {
+    '@tailwindcss/postcss': {},
+    autoprefixer: {},
+    'postcss-px-to-viewport-8-plugin': {
+      viewportWidth: 375, // 设计稿的视口宽度
+      unitPrecision: 5, // 单位转换后保留的精度
+      viewportUnit: 'vw', // 希望使用的视口单位
+      selectorBlackList: [], // 需要忽略的 CSS 选择器
+      minPixelValue: 1, // 小于或等于 1px 不转换为视口单位
+      mediaQuery: false, // 允许在媒体查询中转换 px
+      exclude: [/node_modules/] // 忽略某些文件夹下的文件或特定文件
+    }
+  }
+}
+```
+3. 修改 `main.css` 文件，更新 Tailwind 指令：
+
+
+```css:src/assets/main.css
+@import './base.css';
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+/* 自定义样式 */
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}
+
+/* 其他自定义样式 */
+
+#app {
+  height: 100vh;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+这些修改解决了以下问题：
+1. 使用了正确的 Tailwind CSS PostCSS 插件 `@tailwindcss/postcss`
+2. 更新了 Tailwind CSS 的指令语法，使用 `@import "tailwindcss/preflight"` 替代 `@tailwind base`
+3. 移除了不再支持的 `@tailwind components` 指令
+
+现在 Tailwind CSS 应该可以正常工作了。你可以在组件中继续使用 Tailwind 的工具类，比如：
+- `text-red-500`
+- `flex-center`（我们自定义的组件类）
+- 其他 Tailwind 的工具类
+
+如果还有其他错误，请告诉我，我会继续帮你解决。
