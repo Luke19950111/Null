@@ -521,6 +521,12 @@ var uniq = function (a) {
 + 数组、函数、日期，是类（Class），不是类型
 
 ### 原型链是什么
++ 举例说明
+  + 有一个数组a=[]，数组a有一个隐藏属性__proto__等于Array.prototype，也就是Array.prototype是a的原型
+  + Array.prototype也有隐藏属性__proto__等于Object.prototype，也就是Object.prototype是Array.prototype的原型
+  + A的原型是B，B的原型是C，形成链条，就叫原型链
+
+
 + 怎样创建原型链
 
 ```javascript
@@ -528,6 +534,8 @@ a = Object.create(f) // a.__proto__ === f.prototype
 或
 a = new F() // a.__proto__ === F.prototype
 ```
+
++ 解决的问题：在没有Class的时候实现继承
 
 + 继承是两个类之间的关系
 + let a = []; a 有 length 属性，这叫<font style="color:#DF2A3F;">实例化</font>，a 是 Array 的实例
